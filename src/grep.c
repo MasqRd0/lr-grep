@@ -278,7 +278,7 @@ int main(int argc,char *argv[])
             return 2;
             }
         }
-        if(word>0)                                  /* 处理没有 '\n' 的最后一行 */
+        if(word>0)                       
         {
             buf[word]='\0';
             if(modec==0&&count)
@@ -293,6 +293,7 @@ int main(int argc,char *argv[])
         if(modec) printf("%d\n",matchline);
         free(buf);
         free(ch);
+        free(border);
     }
     return returnCode;
 }
